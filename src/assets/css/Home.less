@@ -1,0 +1,46 @@
+.home {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+
+    .menu-list {
+        position: fixed;
+        width: 180px;
+        height: 100%;
+        transition: width 0.5s linear;
+        background-color: rgb(0, 21, 41);
+        .el-menu{
+            width: 100%;
+            border-right: none;
+        }
+        .el-menu-item{
+            min-width: 180px;
+            padding-left: 20px;
+        }
+        &.menu-fold {
+            width: 100px;
+            .el-menu{
+                width: 100px;
+            }
+            .el-menu-item{
+                
+                min-width: 100px;
+                text-align: center !important;
+                padding: 0 !important;
+            }
+        }
+
+    }
+
+    .main-app {
+        margin-left: 180px;
+        width: calc(100% - 180px);
+        height: 100%;
+        transition: all 0.5s linear;
+
+        &.menu-fold {
+            margin-left: 100px;
+            width: calc(100% - 100px);
+        }
+    }
+}
